@@ -1,0 +1,6 @@
+[user]
+    name = Mathieu Lapointe
+    email = mathieu.lapointe3@mail.mcgill.ca
+
+[credential]
+        helper = store
