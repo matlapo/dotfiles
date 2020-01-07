@@ -9,6 +9,17 @@
 
 [alias]
 
+	ai = add -i
+	b = branch
+	bd = branch --delete
+	c = checkout
+	ca = commit --amend
+	cb = checkout -b
+	co = commit
+	cp = cherry-pick
+	rc = rebase --continue
+	ri = rebase --interactive
+
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
@@ -79,11 +90,6 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-
-[commit]
-
-	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
 
 [diff]
 
