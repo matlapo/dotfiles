@@ -45,5 +45,9 @@ brew install lua
 brew install lynx
 brew install vbindiff
 
+# Install some other software with cask
+brew cask install spectacle
+brew cask install hammerspoon
+
 # Remove outdated versions from the cellar.
 brew cleanup
