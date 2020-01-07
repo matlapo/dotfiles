@@ -44,6 +44,9 @@ brew install git
 brew install lua
 brew install lynx
 brew install vbindiff
+brew install tig
+brew install fish
+brew install nvim
 
 # Install some other software with cask
 brew cask install spectacle
