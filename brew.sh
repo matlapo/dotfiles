@@ -45,6 +45,7 @@ brew install tig
 brew install fish
 brew install nvim
 brew install autojump
+brew install zsh-syntax-highlighting
 
 # Install some other software with cask
 brew cask install spectacle
