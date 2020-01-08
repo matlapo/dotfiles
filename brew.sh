@@ -36,17 +36,15 @@ fi;
 brew install vim
 brew install grep
 brew install openssh
-brew install screen
 
 # Install other useful binaries.
 brew install ack
 brew install git
 brew install lua
-brew install lynx
-brew install vbindiff
 brew install tig
 brew install fish
 brew install nvim
+brew install autojump
 
 # Install some other software with cask
 brew cask install spectacle

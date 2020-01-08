@@ -11,7 +11,7 @@ alias g="git"
 set -Ux EDITOR nvim
 
 # autojump
-# [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
 # Start fish in tmux session
 # test $TERM != "screen"; and exec tmux
