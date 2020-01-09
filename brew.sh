@@ -21,7 +21,7 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed 
+brew install gnu-sed
 # Install a modern version of Bash.
 brew install bash
 brew install bash-completion2
@@ -46,10 +46,12 @@ brew install fish
 brew install nvim
 brew install autojump
 brew install zsh-syntax-highlighting
+brew install bat
 
 # Install some other software with cask
-brew cask install spectacle
 brew cask install hammerspoon
+brew cask install alfred
+brew cask install dash
 
 # Remove outdated versions from the cellar.
 brew cleanup

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 cd "$(dirname "${BASH_SOURCE}")";
 
@@ -12,7 +12,7 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
-	source ~/.zsh;
+	source ~/.zshrc;
 	# execute macos? init option
 	# reset env option too
 }

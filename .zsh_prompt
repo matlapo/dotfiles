@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+PS1='%(?.%F{green}:).%F{red}:()%f %B%F{blue}%1~%f%b %# '

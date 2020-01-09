@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+# Make nvim the default editor.
+export EDITOR='nvim';
