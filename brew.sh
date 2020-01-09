@@ -47,6 +47,7 @@ brew install nvim
 brew install autojump
 brew install zsh-syntax-highlighting
 brew install bat
+brew install exa
 
 # Install some other software with cask
 brew cask install hammerspoon
