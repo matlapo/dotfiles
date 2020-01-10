@@ -15,4 +15,4 @@ for file in ~/.{zsh_prompt,exports,aliases}; do
 done;
 
 # Add
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
