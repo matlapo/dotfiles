@@ -13,3 +13,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 for file in ~/.{zsh_prompt,exports,aliases}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
+
+# Add
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl

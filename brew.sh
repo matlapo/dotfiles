@@ -53,6 +53,7 @@ brew install exa
 brew cask install hammerspoon
 brew cask install alfred
 brew cask install dash
+brew cask install sublime-text
 
 # Remove outdated versions from the cellar.
 brew cleanup
