@@ -2,3 +2,5 @@
 
 # Make nvim the default editor.
 export EDITOR='nvim';
+
+export PATH="~/bin:$PATH"

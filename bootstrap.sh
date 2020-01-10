@@ -15,7 +15,6 @@ function doIt() {
 	source ~/.zshrc;
 	# execute macos? init option
 	# reset env option too
-    mkdir ~/bin
 }
 
 if [ "$1" = "--force" ] || [ "$1" = "-f" ]; then
