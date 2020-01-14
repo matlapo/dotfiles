@@ -48,6 +48,10 @@ brew install autojump
 brew install zsh-syntax-highlighting
 brew install bat
 brew install exa
+brew install ripgrep
+brew install jq
+brew install ngrep
+brew install thefuck
 
 # Install some other software with cask
 brew cask install hammerspoon
