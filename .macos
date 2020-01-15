@@ -261,11 +261,11 @@ defaults write com.apple.commerce AutoUpdate -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
-# Spectacle.app                                                               #
+# Sublime Text 3.app                                                               #
 ###############################################################################
 
-# Set up my preferred keyboard shortcuts
-cp -r init/spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
+# Disable press-and-hold so that hjkl work well in Neovintageous
+defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 
 ###############################################################################
 # Kill affected applications                                                  #
@@ -279,6 +279,7 @@ for app in "Activity Monitor" \
 	"Dock" \
 	"Finder" \
 	"Google Chrome" \
+	"Sublime Text 3" \
 	"Mail" \
 	"Messages" \
 	"Photos" \
