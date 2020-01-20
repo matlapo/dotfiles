@@ -53,6 +53,7 @@ brew install jq
 brew install ngrep
 brew install thefuck
 brew install tmux
+brew install htop
 
 # Install some other software with cask
 brew cask install hammerspoon
