@@ -12,7 +12,7 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
-	source ~/.zshrc;
+	source ~/.zshrc; # TODO: this doesnt seem to work properly
 	# execute macos? init option
 	# reset env option too
 }
