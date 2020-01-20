@@ -12,6 +12,8 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		--exclude "brew.sh" \
+        --exclude "com.googlecode.iterm2.plist" \
+        --exclude "Preferences.sublime-settings" \
 		-avh --no-perms . ~;
 	source ~/.zshrc; # TODO: this doesnt seem to work properly
 	# execute macos? init option
