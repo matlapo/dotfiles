@@ -49,11 +49,14 @@ brew install zsh-syntax-highlighting
 brew install bat
 brew install exa
 brew install ripgrep
+brew install fd
 brew install jq
 brew install ngrep
 brew install thefuck
 brew install tmux
 brew install htop
+brew install youtube-dl
+brew install httpie
 
 # Install some other software with cask
 brew cask install hammerspoon
