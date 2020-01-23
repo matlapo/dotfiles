@@ -61,4 +61,4 @@ alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 
 # Use Homebrew ctags
-alias ctags="`brew --prefix`/bin/ctags
+alias ctags="`brew --prefix`/bin/ctags"
