@@ -17,7 +17,9 @@ brew install coreutils
 ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
 # Install some other useful utilities like `sponge`.
-brew install moreutils
+# Removed for now until brew install moreutils --without-parallel works
+# moreutils's parallel clashes with GNU parallel
+# brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
@@ -57,6 +59,7 @@ brew install tmux
 brew install htop
 brew install youtube-dl
 brew install httpie
+brew install parallel
 
 # Install some other software with cask
 brew cask install hammerspoon
