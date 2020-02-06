@@ -12,3 +12,9 @@ done;
 
 # fzf configs
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# save history to a file
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=1000
+setopt SHARE_HISTORY
