@@ -16,6 +16,7 @@ alias p="cd ~/Projects"
 alias g="git"
 alias vim="nvim"
 alias v="nvim"
+alias zc="v ~/.zshrc"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
