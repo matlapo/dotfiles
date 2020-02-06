@@ -18,3 +18,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=1000
 setopt SHARE_HISTORY
+
+export FPATH="$HOME/.zsh/autoload/:$FPATH"
+autoload -U vf
