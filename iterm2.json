@@ -366,7 +366,7 @@
   "Blur" : false,
   "Vertical Spacing" : 1,
   "Session Close Undo Timeout" : 10,
-  "Normal Font" : "Monaco 14",
+  "Normal Font" : "Monaco 15",
   "Ansi 7 Color" : {
     "Red Component" : 0.77254902999999997,
     "Color Space" : "sRGB",

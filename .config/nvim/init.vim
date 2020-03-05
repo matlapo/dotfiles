@@ -35,6 +35,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " fuzzy file picker
 Plug 'srstevenson/vim-picker'
 
+" erlang
+Plug 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
+
 call plug#end()
 
 " TODO
@@ -238,3 +241,5 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 nmap <leader>pe <Plug>(PickerEdit)
 " pick a file to edit in a new vertical split
 nmap <leader>pv <Plug>(PickerVsplit)
+
+nmap <leader>w :w<cr>
