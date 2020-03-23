@@ -12,4 +12,4 @@ fi
 # ------------
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
-export FZF_DEFAULT_COMMAND='fd --type f --hidden ""'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
