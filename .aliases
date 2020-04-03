@@ -63,3 +63,6 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Use Homebrew ctags
 alias ctags="`brew --prefix`/bin/ctags"
+
+# Console logs
+alias logs="log stream"
