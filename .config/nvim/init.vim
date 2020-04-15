@@ -36,7 +36,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'srstevenson/vim-picker'
 
 " erlang
-Plug 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
@@ -133,13 +133,6 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " source this file once editing is done
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" search for tag file in current directory, search parent directory if file
-" not found
-set tags=tags;/
-
-" necessary for using Rust tags with rusty-tags (https://github.com/dan-t/rusty-tags)
-autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
-
 " I find swap files annoying, use version control
 set nobackup
 set noswapfile
@@ -166,6 +159,10 @@ set showmatch
 set termguicolors
 colorscheme base16-tomorrow-night-eighties
 nnoremap <leader>t :NERDTreeToggle<cr>
+
+nnoremap <leader>op :tabe
+nnoremap <leader>h :tabp<cr>
+nnoremap <leader>l :tabn<cr>
 
 " coc suggested configs, MIGHT REMOVE
 
@@ -238,8 +235,9 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " vim picker
 " open file in current directory in current window
-nmap <leader>pe <Plug>(PickerEdit)
+nmap <leader>o <Plug>(PickerTabedit)
 " pick a file to edit in a new vertical split
 nmap <leader>pv <Plug>(PickerVsplit)
 
-nmap <leader>w :w<cr>
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
