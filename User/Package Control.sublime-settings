@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"GitSavvy",
+		"gruvbox",
+		"LSP",
+		"NeoVintageous",
+		"Package Control",
+		"Terminus",
+		"Zen Tabs"
+	]
+}
