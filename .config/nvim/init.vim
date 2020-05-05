@@ -1,58 +1,89 @@
-" Plugins.
+" inspirations:
+" https://github.com/jonhoo/configs/blob/master/editor/.config/nvim/init.vim
+" https://github.com/antoyo/.dotfiles/blob/master/nvim/.config/nvim/init.vim
+
+let mapleader = "\<Space>"
+
+" plugins
 call plug#begin()
-" asynchronous linting and make framework for Neovim/Vim (run async programs)
-Plug 'benekastah/neomake'
 
-" a vim plugin for visually displaying indent levels in code
+" workflow improvements
+Plug 'justinmk/vim-sneak'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'nathanaelkane/vim-indent-guides'
-
-" plugin for managing comments
 Plug 'scrooloose/nerdcommenter'
 
-" plugin for theme management
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" GUI enhancements
+Plug 'itchyny/lightline.vim'
+Plug 'machakann/vim-highlightedyank'
+Plug 'andymass/vim-matchup'
+
+" fuzzy finding
+Plug 'airblade/vim-rooter'
+Plug 'srstevenson/vim-picker'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " base16 plugin
 Plug 'chriskempson/base16-vim'
 
-" unclear for now if I will keep this
-Plug 'preservim/nerdtree'
+" git integration
+Plug 'tpope/vim-fugitive'
 
-" plugin for :Rg
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-
-"" language server protocol support for neovim
-"Plug 'autozimu/LanguageClient-neovim', {
-    "\ 'branch': 'next',
-    "\ 'do': 'bash install.sh',
-    "\ }
-
-" Use release branch (Recommend)
+" semantic support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" fuzzy file picker
-Plug 'srstevenson/vim-picker'
-
-" erlang
-"Plug 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
+" syntax support
+Plug 'rust-lang/rust.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'cespare/vim-toml'
+Plug 'stephpy/vim-yaml'
+Plug 'rhysd/vim-clang-format'
+Plug 'godlygeek/tabular'
 
 call plug#end()
 
-" TODO
-"
-" / should map to Rg but current file only
-" youcompleteme?
-"
-"
-"
+syntax on
+
+" lightline
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \   'cocstatus': 'coc#status'
+      \ },
+      \ }
+function! LightlineFilename()
+  return expand('%:t') !=# '' ? @% : '[No Name]'
+endfunction
+
+" use autocmd to force lightline update
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 " use system clipboard
 set clipboard=unnamed
 
+nmap <leader>; :Buffers<CR>
+set cmdheight=2
+
+"set background=dark
+"let base16colorspace=256
+"colorscheme base16-bright
+
 " prompt to save file if changed
 set confirm
+
+set encoding=utf-8
+
+" persistent undo
+set undodir=~/.vimdid
+set undofile
+
+set wildmenu
+set wildmode=list:longest
 
 " easily move between previous and next buffers
 nnoremap <leader>l :bnext<cr>
@@ -65,15 +96,8 @@ set hidden
 " enable mouse usage
 set mouse=a
 
-" set space as the leader key
-let mapleader = "\<Space>"
-
 " show current command on status bar
 set showcmd
-
-" highlight the active line.
-"set cursorline
-"highlight CursorLine ctermbg=LightGrey
 
 " show line numbers
 set number
@@ -81,7 +105,9 @@ set number
 " use relative line numbers
 set relativenumber
 
-" Search configuration. TODO
+set nojoinspaces
+
+" Search configuration.
 set gdefault " Enable global substitute (all matches in a line are substituted).
 set hlsearch " Highlight search matches.
 set incsearch " Enable incremental search.
@@ -107,15 +133,11 @@ set magic
 " remove all highlight
 map <silent> <leader><cr> :noh<cr>
 
-" enable syntax highlighting
-syntax on
-
 " color the special keys (tabs, trailing spaces, nbsp) in red.
 highlight Whitespace ctermbg=red
 
-" map jk to <esc>
 inoremap jk <esc>
-"vnoremap jk <esc>
+vnoremap jk <esc>
 
 " jump to start and end of line using the home row keys
 map H ^
@@ -133,111 +155,25 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " source this file once editing is done
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" I find swap files annoying, use version control
 set nobackup
 set noswapfile
 
-"" all installed language servers
-"let g:LanguageClient_serverCommands = {
-    "\ 'rust': ['ra_lsp_server'],
-    "\ 'python': ['/usr/local/bin/pyls'],
-    "\ }
-
-""nnoremap <leader>cm :call LanguageClient_contextMenu()<CR>
-"nnoremap <leader>gd :call LanguageClient#textDocument_definition()<CR>
-"nnoremap <leader>re :call LanguageClient#textDocument_rename()<CR>
-
-"" automatically start language servers.
-"let g:LanguageClient_autoStart = 1
-
 nnoremap <leader>s :Rg<cr>
-nnoremap <leader>o :Buffers<cr>
+nnoremap <leader>b :Buffers<cr>
 
-" TESTING, MIGHT REMOVE
+" Left and right can switch buffers
+nnoremap <left> :bp<CR>
+nnoremap <right> :bn<CR>
+
 set autoindent
 set showmatch
 set termguicolors
-colorscheme base16-tomorrow-night-eighties
-nnoremap <leader>t :NERDTreeToggle<cr>
 
-nnoremap <leader>op :tabe
-nnoremap <leader>h :tabp<cr>
-nnoremap <leader>l :tabn<cr>
-
-" coc suggested configs, MIGHT REMOVE
-
-" Better display for messages
-set cmdheight=2
-
-" You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" always show signcolumns
-set signcolumn=yes
-
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" Or use `complete_info` if your vim support it, like:
-" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-
-" Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" vim picker
-" open file in current directory in current window
-nmap <leader>o <Plug>(PickerTabedit)
-" pick a file to edit in a new vertical split
+nmap <leader>o <Plug>(PickerEdit)
 nmap <leader>pv <Plug>(PickerVsplit)
 
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
+
+" display which file currently viewed in tmux window
+autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window '" . expand("%:t") . "'")
