@@ -72,6 +72,7 @@ set cmdheight=2
 "set background=dark
 "let base16colorspace=256
 "colorscheme base16-bright
+highlight clear SignColumn
 
 " prompt to save file if changed
 set confirm
