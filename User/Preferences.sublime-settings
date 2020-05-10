@@ -1,16 +1,27 @@
 {
 	"color_scheme": "Packages/themes/Tomorrow Night - Bright.tmTheme",
-	"font_face": "monaco",
-	"font_size": 14,
+	"font_face": "Input Mono Narrow",
+	"font_size": 17,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Rust",
 		"Six",
 		"Vintage",
 		"Vintageous"
 	],
 	"neovintageous_build_version": 11100,
-	"theme": "gruvbox.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
+	"vintageous_enable_abolish": true,
+	"vintageous_enable_commentary": true,
+	"vintageous_enable_multiple_cursors": true,
+	"vintageous_enable_sneak": true,
+	"vintageous_enable_sublime": false,
+	"vintageous_enable_surround": true,
+	"vintageous_enable_unimpaired": true,
+	"vintageous_reset_mode_when_switching_tabs": false,
+	"vintageous_terminal": "iTerm2",
 	"vintageous_use_ctrl_keys": null,
-	"vintageous_use_super_keys": null
+	"vintageous_use_super_keys": false,
+	"vintageous_use_sys_clipboard": true
 }

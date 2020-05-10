@@ -1,0 +1,8 @@
+" Type :help nv for help.
+
+let mapleader=<space>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>t :Neovintageous action=toggle_side_bar<CR>
+nnoremap <leader>ev :Neovintageous action=open_rc_file<CR>
+nnoremap <leader>sv :Neovintageous action=reload_rc_file<CR>

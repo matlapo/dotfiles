@@ -6,11 +6,12 @@
 	"installed_packages":
 	[
 		"GitSavvy",
-		"gruvbox",
 		"LSP",
 		"NeoVintageous",
 		"Package Control",
-		"Terminus",
+		"Rust Enhanced",
+		"SublimeREPL",
+		"ToggleNeoVintageous",
 		"Zen Tabs"
 	]
 }
