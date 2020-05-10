@@ -1,32 +1,37 @@
 #!/usr/bin/env zsh
 
+# to install, cd into env/ and run `brew bundle`
+# then execute this file.
+
 cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
 
-function doIt() {
-	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
-		--exclude ".osx" \
-		--exclude "bootstrap.sh" \
-		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
-		--exclude "brew.sh" \
-        --exclude "com.googlecode.iterm2.plist" \
-        --exclude "Preferences.sublime-settings" \
-		-avh --no-perms . ~;
-	source ~/.zshrc; # TODO: this doesnt seem to work properly
-	# execute macos? init option
-	# reset env option too
+function createLinks() {
+	# editor
+	mkdir -p ~/.config/nvim
+	ln -sf ~/Projects/dotfiles/editor/init.vim ~/.config/nvim/init.vim
+	ln -sf ~/Projects/dotfiles/editor/coc-settings.json ~/.config/nvim/coc-settings.json
+	gcp --symbolic-link -rf ~/Projects/dotfiles/editor/sublime/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+	gcp --symbolic-link -rf ~/Projects/dotfiles/editor/.* ~
+	ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl subl
+
+	# env
+	ln -sf ~/Projects/dotfiles/env/.macos ~/.macos
+
+	# gui
+	mkdir -p ~/.hammerspoon
+	gcp --symbolic-link -rf ~/Projects/dotfiles/gui/.hammerspoon/* ~/.hammerspoon
+
+	# shell
+	gcp --symbolic-link -rf ~/Projects/dotfiles/shell/.* ~
+	gcp --symbolic-link -rf ~/Projects/dotfiles/shell/zsh/.* ~
+	gcp --symbolic-link -rf ~/Projects/dotfiles/shell/git/.* ~
 }
 
-if [ "$1" = "--force" ] || [ "$1" = "-f" ]; then
-	doIt;
-else
-	read -q '?This may overwrite existing files in your home directory. Are you sure? (y/n)? ';
-	echo "";
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt;
-	fi;
+read -q '?This may overwrite existing files in your home directory. Are you sure? (y/n)? ';
+echo "";
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+	createLinks;
 fi;
-unset doIt;
+unset createLinks;

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# based on https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+
 # note that you will need to logout and shutdown for some changes to take effect
 
 # Close any open System Preferences panes, to prevent them from overriding

@@ -1,8 +1,0 @@
-#!/usr/bin/env zsh
-
-# Make nvim the default editor.
-export EDITOR='nvim';
-
-export PATH="/Users/m1.lapointe/bin/:$PATH"
-
-export FZF_DEFAULT_OPTS='--height 30% --layout=reverse'

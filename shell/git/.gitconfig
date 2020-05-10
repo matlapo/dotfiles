@@ -1,14 +1,13 @@
-[user]
+# based on https://github.com/mathiasbynens/dotfiles/blob/master/.gitconfig
 
+[user]
 	name = Mathieu Lapointe
 	email = mathieu.lapointe3@mail.mcgill.ca
 
 [credential]
-
         helper = store
 
 [alias]
-
     a = add
 	ai = add -i
 	b = branch
@@ -47,7 +46,6 @@
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 
 [apply]
-
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
@@ -59,56 +57,3 @@
 	# [default] trailing-space: looks for spaces at the end of a line
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
-
-	# Make `git rebase` safer on macOS
-	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
-	trustctime = false
-
-	# Speed up commands involving untracked files such as `git status`.
-	# https://git-scm.com/docs/git-update-index#_untracked_cache
-	untrackedCache = true
-
-[color]
-
-	# Use colors in Git commands that are capable of colored output when
-	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-	ui = auto
-
-[color "branch"]
-
-	current = yellow reverse
-	local = yellow
-	remote = green
-
-[color "diff"]
-
-	meta = yellow bold
-	frag = magenta bold # line info
-	old = red # deletions
-	new = green # additions
-
-[color "status"]
-
-	added = yellow
-	changed = green
-	untracked = cyan
-
-[diff]
-
-	# Detect copies as well as renames
-	renames = copies
-
-[diff "bin"]
-
-	# Use `hexdump` to diff binary files
-	textconv = hexdump -v -C
-
-[help]
-
-	# Automatically correct and execute mistyped commands
-	autocorrect = 1
-
-[merge]
-
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true

@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+export EDITOR='nvim';
+export PATH="/Users/m1.lapointe/bin:$PATH"
+export FZF_DEFAULT_OPTS='--height 30% --layout=reverse'
+export FPATH="$HOME/.zsh/autoload/:$FPATH"
+export PATH=/usr/local/Cellar/ruby/2.6.5/bin:$PATH
+export PATH=/usr/local/lib/ruby/gems/2.6.0/bin:$PATH
+export PATH=$PATH:/usr/local/opt/riscv-gnu-toolchain/bin
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"

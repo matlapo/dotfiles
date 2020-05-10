@@ -19,9 +19,5 @@ HISTSIZE=10000
 SAVEHIST=1000
 setopt SHARE_HISTORY
 
-export FPATH="$HOME/.zsh/autoload/:$FPATH"
 autoload -U vf
 
-export PATH=/usr/local/Cellar/ruby/2.6.5/bin:$PATH
-export PATH=/usr/local/lib/ruby/gems/2.6.0/bin:$PATH
-export PATH=$PATH:/usr/local/opt/riscv-gnu-toolchain/bin
