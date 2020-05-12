@@ -8,7 +8,7 @@ alias .....="cd ../../../.."
 
 # shadowing
 alias cat="bat"
-alias ls="exa"
+alias ls="exa --color=never"
 
 # shortcuts
 alias db="cd ~/Documents/Dropbox"
