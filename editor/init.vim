@@ -35,7 +35,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " syntax support
 Plug 'rust-lang/rust.vim'
-Plug 'plasticboy/vim-markdown'
+"Plug 'plasticboy/vim-markdown'
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rhysd/vim-clang-format'

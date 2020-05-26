@@ -57,3 +57,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 
 # console logs
 alias logs="log stream"
+
+# suffix aliases
+alias -s md=nvim
+alias -s {rs,erl,hrl,go,c,h}=subl

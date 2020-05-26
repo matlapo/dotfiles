@@ -19,3 +19,5 @@ setopt SHARE_HISTORY
 
 autoload -U vf
 
+alias ev="$EDITOR $HOME/.zshrc"
+alias sv="source $HOME/.zshrc"
