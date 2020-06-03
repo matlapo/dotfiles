@@ -22,6 +22,8 @@ alias zc="v ~/.zshrc"
 alias s="subl"
 alias ev="v ~/.config/nvim/init.vim"
 
+alias mv="mv -i"
+
 # enable aliases to be sudo’ed
 alias sudo='sudo '
 
