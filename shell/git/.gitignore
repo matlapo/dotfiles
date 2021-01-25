@@ -6,3 +6,6 @@
 
 Package Control.merged-ca-bundle
 oscrypto-ca-bundle.crt
+
+test/.rebar3/
+erlang_ls.config
