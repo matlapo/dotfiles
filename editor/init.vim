@@ -35,7 +35,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " syntax support
 Plug 'rust-lang/rust.vim'
-"Plug 'plasticboy/vim-markdown'
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rhysd/vim-clang-format'
@@ -63,15 +62,18 @@ endfunction
 " use autocmd to force lightline update
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
+" access colors present in 256 colorspace
+let base16colorspace=256
+
+colorscheme base16-summerfruit-dark
+
+set termguicolors
+
 " use system clipboard
 set clipboard=unnamed
 
 nmap <leader>; :Buffers<CR>
 set cmdheight=2
-
-set background=dark
-let base16colorspace=256
-highlight clear SignColumn
 
 " prompt to save file if changed
 set confirm
@@ -105,14 +107,12 @@ set number
 " use relative line numbers
 set relativenumber
 
-set nojoinspaces
-
 " Search configuration.
 set gdefault " Enable global substitute (all matches in a line are substituted).
 set hlsearch " Highlight search matches.
 set incsearch " Enable incremental search.
 
-" a tab is 4 characters
+" set tab to be 4 characters
 set tabstop=4
 
 " >> and friends indent by 4 characters
@@ -127,27 +127,14 @@ set ignorecase
 " search as I type
 set incsearch
 
-" I don't know what that does
-set magic
-
 " remove all highlight
 map <silent> <leader><cr> :noh<cr>
 
-" color the special keys (tabs, trailing spaces, nbsp) in red.
-highlight Whitespace ctermbg=red
-
 inoremap jk <esc>
-vnoremap jk <esc>
 
 " jump to start and end of line using the home row keys
 map H ^
 map L $
-
-" trim trailing whitespaces on save
-autocmd BufWritePre * %s/\s\+$//e
-
-" always keep a number of lines before and after the cursor
-set scrolloff=10
 
 " quickly edit this file
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -164,10 +151,6 @@ nnoremap <leader>b :Buffers<cr>
 " Left and right can switch buffers
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
-
-set autoindent
-set showmatch
-set termguicolors
 
 nmap <leader>o <Plug>(PickerEdit)
 nmap <leader>pv <Plug>(PickerVsplit)
