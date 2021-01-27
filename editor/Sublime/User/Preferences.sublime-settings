@@ -1,0 +1,8 @@
+{
+	"font_size": 19,
+	"ignored_packages":
+	[
+		"Rust",
+		"Vintage"
+	]
+}

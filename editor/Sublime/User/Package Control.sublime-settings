@@ -1,0 +1,15 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Debugger",
+		"Fix Mac Path",
+		"LSP",
+		"Package Control",
+		"Rust Enhanced",
+		"RustFmt"
+	]
+}
