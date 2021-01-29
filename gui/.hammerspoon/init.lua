@@ -89,6 +89,7 @@ fnutils.each({
   { key = "s", app = "Safari" },
   { key = "v", app = "Code" },
   { key = "i", app = "iTerm2" },
+  { key = "c", app = "Sublime Text" },
 }, function(object)
     definitions[object.key] = function()
       local app = appfinder.appFromName(object.app)
