@@ -3,6 +3,7 @@
 	[
 		"~/bin"
 	],
+	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-circus.tmTheme",
 	"font_face": "Input Mono Narrow",
 	"font_size": 20,
 	"highlight_modified_tabs": true,

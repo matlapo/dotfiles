@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Base16 Color Schemes",
 		"Fix Mac Path",
 		"GitSavvy",
 		"LSP",
