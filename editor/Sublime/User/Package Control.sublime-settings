@@ -7,7 +7,9 @@
 	[
 		"Debugger",
 		"Fix Mac Path",
+		"GitSavvy",
 		"LSP",
+		"NeoVintageous",
 		"Package Control",
 		"Rust Enhanced",
 		"RustFmt"

@@ -1,9 +1,39 @@
 {
+	"auto_show_diagnostics_panel": "always",
 	"clients":
 	{
+		"erlang-ls":
+		{
+			"command":
+			[
+				"erlang_ls",
+				"--transport",
+				"stdio",
+				"-l",
+				"debug"
+			],
+			"enabled": true,
+			"initialize_timeout": 30,
+			"languageId": "erlang",
+			"scopes":
+			[
+				"source.erlang"
+			],
+			"syntaxes":
+			[
+				"Packages/Erlang/Erlang.sublime-syntax"
+			]
+		},
 		"rust-analyzer":
 		{
 			"enabled": true
 		}
-	}
+	},
+	"document_highlight_style": "underline",
+	"log_debug": true,
+	"log_payloads": true,
+	"log_server": true,
+	"log_stderr": true,
+	"show_diagnostics_count_in_view_status": true,
+	"show_view_status": true
 }

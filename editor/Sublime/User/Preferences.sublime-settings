@@ -1,8 +1,22 @@
 {
-	"font_size": 19,
+	"additional_path_items":
+	[
+		"~/bin"
+	],
+	"font_face": "Input Mono Narrow",
+	"font_size": 20,
+	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Rust",
-		"Vintage"
-	]
+		"Six",
+		"Vintage",
+		"Vintageous"
+	],
+	"neovintageous_build_version": 11100,
+	"theme": "Adaptive.sublime-theme",
+	"vintageous_reset_mode_when_switching_tabs": false,
+	"vintageous_terminal": "iTerm2",
+	"vintageous_use_ctrl_keys": true,
+	"vintageous_use_sys_clipboard": true
 }
