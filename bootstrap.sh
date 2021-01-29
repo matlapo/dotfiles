@@ -12,7 +12,7 @@ function createLinks() {
 	mkdir -p ~/.config/nvim
 	ln -sf ~/Projects/dotfiles/editor/init.vim ~/.config/nvim/init.vim
 	ln -sf ~/Projects/dotfiles/editor/coc-settings.json ~/.config/nvim/coc-settings.json
-	gcp --symbolic-link -rf ~/Projects/dotfiles/editor/sublime/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+	gcp --symbolic-link -rf ~/Projects/dotfiles/editor/Sublime/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
 	gcp --symbolic-link -rf ~/Projects/dotfiles/editor/.* ~
 	ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl subl
 
