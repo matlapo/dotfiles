@@ -1,0 +1,1 @@
+<items><item arg="42" uid="decimal" valid="yes"><icon>icons/decimal.png</icon><subtitle>Decimal</subtitle><title>42</title></item><item arg="101010" uid="conv" valid="yes"><icon>icon.png</icon><subtitle>Number to base 2</subtitle><title>101010</title></item></items>
