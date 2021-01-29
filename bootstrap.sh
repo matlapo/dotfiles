@@ -22,6 +22,7 @@ function createLinks() {
 	# gui
 	mkdir -p ~/.hammerspoon
 	gcp --symbolic-link -rf ~/Projects/dotfiles/gui/.hammerspoon/* ~/.hammerspoon
+	ln -sf ~/Projects/dotfiles/gui/karabiner.json ~/.config/karabiner/karabiner.json
 
 	# shell
 	gcp --symbolic-link -rf ~/Projects/dotfiles/shell/.* ~
