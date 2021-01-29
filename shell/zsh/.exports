@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-export EDITOR='nvim';
+export EDITOR='subl -w'
 export PATH="/Users/m1.lapointe/bin:$PATH"
 export FZF_DEFAULT_OPTS='--height 30% --layout=reverse'
 export FPATH="$HOME/.zsh/autoload/:$FPATH"
