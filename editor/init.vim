@@ -12,6 +12,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/nerdcommenter'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
