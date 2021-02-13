@@ -65,3 +65,5 @@
 
 [delta]
     features = side-by-side line-numbers
+[pull]
+	rebase = true
