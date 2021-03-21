@@ -30,9 +30,6 @@ alias sudo='sudo '
 # get macOS Software Updates, and update installed Homebrew packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup'
 
-# google Chrome
-alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
@@ -54,12 +51,5 @@ alias reload="exec ${SHELL} -l"
 # print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-# use Homebrew ctags
-alias ctags="`brew --prefix`/bin/ctags"
-
 # console logs
 alias logs="log stream"
-
-# suffix aliases
-alias -s md=nvim
-alias -s {rs,erl,hrl,go,c,h}=subl

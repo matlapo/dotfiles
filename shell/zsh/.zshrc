@@ -20,9 +20,6 @@ setopt SHARE_HISTORY
 
 setopt globdots
 
-autoload -U vf
-autoload -U co
-
 alias ev="$EDITOR $HOME/.zshrc"
 alias sv="source $HOME/.zshrc"
 
