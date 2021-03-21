@@ -1,4 +1,0 @@
-co() {
-    git checkout `git branch | fzf`
-}
-
