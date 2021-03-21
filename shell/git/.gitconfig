@@ -11,13 +11,9 @@
     a = add
 	ai = add -i
 	b = branch
-	bd = branch --delete
-	c = checkout
 	ca = commit --amend
 	cb = checkout -b
-	co = commit
     cm = commit -m
-	cp = cherry-pick
 	rc = rebase --continue
 	ri = rebase --interactive
 
@@ -30,20 +26,11 @@
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
-	# Commit all changes
-	ca = !git add -A && git commit -av
-
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
 	# List aliases
 	aliases = config --get-regexp alias
-
-	# Amend the currently staged files to the latest commit
-	amend = commit --amend --reuse-message=HEAD
-
-	# Interactive rebase with the given number of latest commits
-	reb = "!r() { git rebase -i HEAD~$1; }; r"
 
 [apply]
 	# Detect whitespace errors when applying a patch
