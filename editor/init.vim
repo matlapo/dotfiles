@@ -1,6 +1,3 @@
-" inspirations:
-" https://github.com/jonhoo/configs/blob/master/editor/.config/nvim/init.vim
-" https://github.com/antoyo/.dotfiles/blob/master/nvim/.config/nvim/init.vim
 
 let mapleader = "\<Space>"
 
@@ -31,9 +28,6 @@ Plug 'chriskempson/base16-vim'
 " git integration
 Plug 'tpope/vim-fugitive'
 
-" semantic support
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " syntax support
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
@@ -46,22 +40,19 @@ call plug#end()
 syntax on
 
 " lightline
+" stolen from https://github.com/jonhoo/configs/blob/master/editor/.config/nvim/init.vim
 let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
-      \   'cocstatus': 'coc#status'
       \ },
       \ }
 function! LightlineFilename()
   return expand('%:t') !=# '' ? @% : '[No Name]'
 endfunction
-
-" use autocmd to force lightline update
-autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 " access colors present in 256 colorspace
 let base16colorspace=256
@@ -155,10 +146,4 @@ nnoremap <right> :bn<CR>
 
 nmap <leader>o <Plug>(PickerEdit)
 nmap <leader>pv <Plug>(PickerVsplit)
-
-nnoremap <leader>w :w<cr>
-nnoremap <leader>q :q<cr>
-
-" display which file currently viewed in tmux window
-autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window '" . expand("%:t") . "'")
 
