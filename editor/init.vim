@@ -10,6 +10,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/vim-peekaboo'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -17,16 +18,13 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
 
 " fuzzy finding
-Plug 'airblade/vim-rooter'
+"Plug 'airblade/vim-rooter'
 Plug 'srstevenson/vim-picker'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " base16 plugin
 Plug 'chriskempson/base16-vim'
-
-" git integration
-Plug 'tpope/vim-fugitive'
 
 " syntax support
 Plug 'rust-lang/rust.vim'

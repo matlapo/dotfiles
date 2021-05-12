@@ -29,11 +29,15 @@
 			"enabled": true
 		}
 	},
-	"document_highlight_style": "underline",
 	"log_debug": true,
 	"log_payloads": true,
 	"log_server": true,
 	"log_stderr": true,
 	"show_diagnostics_count_in_view_status": true,
-	"show_view_status": true
+	"show_view_status": true,
+
+	// testing
+	// "show_diagnostics_in_view_status": false,
+	// "document_highlight_style": "",
+	"auto_show_diagnostics_panel": "always",
 }
