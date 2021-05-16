@@ -23,9 +23,6 @@ setopt globdots
 alias ev="$EDITOR $HOME/.zshrc"
 alias sv="source $HOME/.zshrc"
 
-# active OTP 21
-KERL_ENABLE_PROMPT=y . ~/kerl/23.0/activate
-
 # pyenv set up
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"

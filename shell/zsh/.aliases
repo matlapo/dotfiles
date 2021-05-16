@@ -8,17 +8,16 @@ alias .....="cd ../../../.."
 
 # shadowing
 alias cat="bat"
-alias ls="exa --color=never"
+alias exa="exa --color=never"
 
 # shortcuts
 alias db="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/Projects"
+alias c="cd ~/code"
 alias g="git"
 alias vim="nvim"
 alias v="nvim"
-alias zc="v ~/.zshrc"
 alias s="subl"
 alias ev="v ~/.config/nvim/init.vim"
 
