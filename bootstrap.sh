@@ -10,23 +10,17 @@ git pull origin master;
 function createLinks() {
 	# editor
 	mkdir -p ~/.config/nvim
-	ln -sf ~/Projects/dotfiles/editor/init.vim ~/.config/nvim/init.vim
-	gcp --symbolic-link -rf ~/Projects/dotfiles/editor/Sublime/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
-	gcp --symbolic-link -rf ~/Projects/dotfiles/editor/.* ~
+	ln -sf ~/code/dotfiles/editor/init.vim ~/.config/nvim/init.vim
+	gcp --symbolic-link -rf ~/code/dotfiles/editor/.* ~
 	ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl subl
-
-	# env
-	ln -sf ~/Projects/dotfiles/env/.macos ~/.macos
 
 	# gui
 	mkdir -p ~/.hammerspoon
-	gcp --symbolic-link -rf ~/Projects/dotfiles/gui/.hammerspoon/* ~/.hammerspoon
-	ln -sf ~/Projects/dotfiles/gui/karabiner.json ~/.config/karabiner/karabiner.json
+	gcp --symbolic-link -rf ~/code/dotfiles/gui/.hammerspoon/* ~/.hammerspoon
 
 	# shell
-	gcp --symbolic-link -rf ~/Projects/dotfiles/shell/.* ~
-	gcp --symbolic-link -rf ~/Projects/dotfiles/shell/zsh/.* ~
-	gcp --symbolic-link -rf ~/Projects/dotfiles/shell/git/.* ~
+	gcp --symbolic-link -rf ~/code/dotfiles/shell/zsh/.* ~
+	gcp --symbolic-link -rf ~/code/dotfiles/shell/git/.* ~
 }
 
 read -q '?This may overwrite existing files in your home directory. Are you sure? (y/n)? ';
