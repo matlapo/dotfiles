@@ -18,6 +18,7 @@ alias c="cd ~/code"
 alias g="git"
 alias vim="nvim"
 alias v="nvim"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias s="subl"
 alias ev="v ~/.config/nvim/init.vim"
 
