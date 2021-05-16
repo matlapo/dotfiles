@@ -12,7 +12,7 @@ function createLinks() {
 	mkdir -p ~/.config/nvim
 	ln -sf ~/code/dotfiles/editor/init.vim ~/.config/nvim/init.vim
 	gcp --symbolic-link -rf ~/code/dotfiles/editor/.* ~
-	ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl subl
+	ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/bin/subl
 
 	# gui
 	mkdir -p ~/.hammerspoon
