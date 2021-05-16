@@ -88,7 +88,7 @@ defaults write com.apple.dock autohide-delay -float 0
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
-# # Disable inline attachments (just show the icons)
+# Disable inline attachments (just show the icons)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # Don’t display the annoying prompt when quitting iTerm
