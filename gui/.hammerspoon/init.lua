@@ -86,10 +86,11 @@ definitions = {
 -- Launch and focus applications
 fnutils.each({
   { key = "f", app = "Finder" },
-  { key = "s", app = "Safari" },
+  { key = "s", app = "Google Chrome" },
   { key = "v", app = "Code" },
   { key = "i", app = "iTerm2" },
   { key = "c", app = "Sublime Text" },
+  { key = "p", app = "Preview" },
 }, function(object)
     definitions[object.key] = function()
       local app = appfinder.appFromName(object.app)

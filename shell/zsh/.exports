@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 export EDITOR='subl -w'
-export PATH="/Users/m1.lapointe/bin:$PATH"
+export PATH="/Users/matlapo/bin:$PATH"
 export FZF_DEFAULT_OPTS='--height 30% --layout=reverse'
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
