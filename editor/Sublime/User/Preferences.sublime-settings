@@ -12,7 +12,7 @@
 	[
 		"Six",
 		"Vintage",
-		"Vintageous"
+		"Vintageous",
 	],
 	"install_prereleases":
 	[
@@ -35,5 +35,6 @@
 	"vintageous_sneak_use_ic_scs": 1,
 	"vintageous_terminal": "iTerm2",
 	"vintageous_use_ctrl_keys": true,
-	"vintageous_use_sys_clipboard": true
+	"vintageous_use_sys_clipboard": true,
+	"show_full_path": true,
 }
