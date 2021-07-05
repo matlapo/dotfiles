@@ -1,8 +1,0 @@
-vf() {
-    local OFILE=$(fzf)
-    if [[ "$OFILE" ]]; then
-        nvim "$OFILE"
-    else
-        return 1
-    fi
-}
