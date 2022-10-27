@@ -1,8 +1,0 @@
-# compiled Python files
-*.pyc
-
-# folder view configuration files
-.DS_Store
-
-Package Control.merged-ca-bundle
-oscrypto-ca-bundle.crt
