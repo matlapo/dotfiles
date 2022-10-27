@@ -1,5 +1,3 @@
-# based on https://github.com/mathiasbynens/dotfiles/blob/master/.gitconfig
-
 [user]
     name = Mathieu Lapointe
     email = matlapo.dev@gmail.com
@@ -8,49 +6,18 @@
     helper = store
 
 [alias]
-    a = add
-    ai = add -i
-    b = branch
     ca = commit --amend
-    cb = checkout -b
     cm = commit -m
-    rc = rebase --continue
-    ri = rebase --interactive
-
-    # View abbreviated SHA, description, and history graph of the latest 20 commits
-    l = log --pretty=oneline -n 20 --graph --abbrev-commit
-
-    # View the current working tree status using the short format
     s = status -s
-
-    # Show the diff between the latest commit and the current state
-    d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-
-    # Switch to a branch, creating it if necessary
-    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
-
-# List aliases
-aliases = config --get-regexp alias
 
 [apply]
     # Detect whitespace errors when applying a patch
     whitespace = fix
-
-[core]
-    # Use custom `.gitignore`
-    excludesfile = ~/.gitignore
 
     # Treat spaces before tabs and all kinds of trailing whitespace as an error
     # [default] trailing-space: looks for spaces at the end of a line
     # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
     whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
-    pager = delta
-
-[interactive]
-    diffFilter = delta --color-only
-
-[delta]
-    features = side-by-side line-numbers
 [pull]
     rebase = true
