@@ -87,9 +87,8 @@ definitions = {
 fnutils.each({
   { key = "f", app = "Finder" },
   { key = "s", app = "Google Chrome" },
-  { key = "v", app = "Code" },
+  { key = "c", app = "Code" },
   { key = "i", app = "iTerm2" },
-  { key = "c", app = "Sublime Text" },
   { key = "p", app = "Preview" },
 }, function(object)
     definitions[object.key] = function()
