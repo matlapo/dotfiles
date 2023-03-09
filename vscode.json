@@ -1,0 +1,23 @@
+{
+    "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+    "editor.fontSize": 16,
+    "vim.vimrc.enable": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<esc>"]
+        }
+    ],
+    "editor.fontFamily": "Input Mono Narrow",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "extensions.ignoreRecommendations": true,
+    "vim.useSystemClipboard": true,
+    "redhat.telemetry.enabled": true,
+    "window.zoomLevel": 2,
+    "git.openRepositoryInParentFolders": "always",
+    "remote.SSH.useLocalServer": false,
+    "remote.SSH.remotePlatform": {
+        "meerkat": "linux"
+    }
+}
