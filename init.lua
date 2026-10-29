@@ -87,9 +87,12 @@ definitions = {
 fnutils.each({
   { key = "f", app = "Finder" },
   { key = "s", app = "Google Chrome" },
-  { key = "c", app = "Code" },
-  { key = "i", app = "iTerm2" },
+  { key = "c", app = "Zed" },
+  { key = "i", app = "Ghostty" },
   { key = "p", app = "Preview" },
+  { key = "m", app = "Mail" },
+  { key = "z", app = "Zoom" },
+  { key = "l", app = "Claude" },
 }, function(object)
     definitions[object.key] = function()
       local app = appfinder.appFromName(object.app)

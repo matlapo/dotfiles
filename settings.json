@@ -1,0 +1,87 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "scrollbar": {
+    "git_diff": true,
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "completions": {
+    "words": "disabled",
+  },
+  "languages": {
+    "Python": {
+      "enable_language_server": false,
+    },
+  },
+  "agent": {
+    "tool_permissions": {
+      "default": "allow",
+    },
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-opus-4-5",
+    },
+    "model_parameters": [],
+  },
+  "vim_mode": true,
+  "ui_font_size": 22,
+  "buffer_font_size": 22,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark",
+  },
+  "auto_update": false,
+  "search": {
+    "whole_word": false,
+    "case_sensitive": false,
+    "include_ignored": false,
+    "regex": false,
+  },
+  "show_completions_on_input": true,
+  "show_completion_documentation": true,
+  "show_edit_predictions": true,
+  "show_whitespaces": "selection",
+  "double_click_in_multibuffer": "open",
+  "extend_comment_on_newline": false,
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true,
+  },
+  "outline_panel": {
+    "button": false,
+    "default_width": 340,
+  },
+  "notification_panel": { "button": false },
+  "collaboration_panel": { "button": false },
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "lsp": {
+    "jdtls": {
+      "settings": {
+        "java_home": "/Users/mathieu.lapointe/.sdkman/candidates/java/current",
+      },
+    },
+  },
+  "ssh_connections": [
+    {
+      "host": "10.0.0.145",
+      "projects": [{ "paths": ["~/code/kernel"] }],
+    },
+  ],
+  "preferred_line_length": 80,
+  "soft_wrap": "none",
+  "allow_rewrap": "anywhere",
+  "diff_view_style": "split",
+}
